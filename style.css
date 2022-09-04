@@ -1,0 +1,205 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************************************************** End of reset**************************************************************************************************************************************/
+:root{
+    /* color scheme */
+    --font-light:#fdfdf8;
+    --font-dark:#131212;
+    --background-primary:#fffefe;
+    --background-secondary:#fafafa;
+    --background-transparent-dark:#070707c1;
+    --btn-primary:#596c49;   
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    /* End Of color scheme */
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button{
+    background-color: var(--btn-primary);
+    color: var(--font-light);
+    box-shadow: 3px 3px 2px #aeaeae;
+
+}
+
+@media screen and (orientation: landscape) {
+    .img-container{
+        width: var(--graphics-width);
+        height: var(--graphics-height);
+        overflow: hidden;
+    } 
+    
+    
+    .logo-container{
+        --logo-font-size: calc(0.09 * var(--graphics-width));
+        width: var(--graphics-width);
+        position: absolute;
+        top: var(--logo-top);
+    }
+    .main-container{
+        flex-direction: row;
+        align-items: center;
+        --graphics-width:40vw;
+        --graphics-height:100vh;
+        --logo-height: 15vh;
+        --logo-top: 40vh;
+        --logic-content-width: 60vw;
+
+    }
+}
+
+
+@media screen and (orientation: portrait) {
+    .img-container{
+        width: var(--graphics-width);
+        height: var(--graphics-height);
+        overflow: hidden;
+    } 
+    .logo-container{
+        --logo-font-size: calc(0.09 * var(--graphics-width));
+        width: var(--graphics-width);
+        position: absolute;
+        top: var(--logo-top);
+    }
+    .main-container{
+        flex-direction: column;
+        align-items: center;
+        --graphics-width:100vw;
+        --logic-content-width: 100vw;
+        --graphics-height:50vh;
+        --logo-height: 15vh;
+        --logo-top: 20vh;
+    }
+    
+  }
+
+#signup-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo-container{
+    height: max(2 * var(--logo-font-size), 1.5 * var(--logo-height));
+    position: absolute;
+    background-color: var(--background-transparent-dark);
+    color: var(--font-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-size: var(--logo-font-size);
+}
+
+.logo-container span{
+    padding-left: 10px;
+}
+
+.main-container{
+    display: flex;
+    background-color: var(--background-secondary);
+}
+
+.logic-container{
+    flex: 1;
+    background-color: var(--background-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.plain-text-container{
+    width: clamp(30ch, 80%, 90ch);
+    margin-block: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.panel{
+    width:90%;
+    box-shadow: 8px 8px 7px #aeaeae;
+    background-color: var(--background-primary);
+    border: 0.2px solid rgb(194, 194, 194);
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-block: min(3rem,3vh);
+    padding-inline: min(4rem,4vw);
+    box-sizing: border-box;
+    
+}
+
+.panel .panel-header{
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: bold;
+    
+    
+}
+
+.panel .btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.panel button{
+    width: clamp(30ch,40%,15rem);
+    border-radius: 8px;
+    min-height: 2.5rem;
+    font-size: calc(0.5* clamp(1.5rem, 2vw, 2.5rem));
+}
