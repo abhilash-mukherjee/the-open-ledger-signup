@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="domGenerator.js" defer></script>
 </head>
 <body>
     <div class="main-container">
+        
+    </div>
+    <!-- <div class="main-container">
         <div class="graphics">
             <div class="img-container">
                 <img src="./images/sri-lanka-KSa66AYiqnk-unsplash.jpg" alt="landing-page-image" id="signup-img">
@@ -24,17 +28,114 @@
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto soluta dicta at neque minus eos doloremque, libero mollitia earum aspernatur, magni quasi, cumque molestias. Placeat ipsum porro doloremque alias perspiciatis?
                 </div>
             </div>
-            <div class="panel">
-            <div class="panel-header">
-                You are ?
-            </div >
-            <div class="btn-container">
+            <div class="panel" id="welcome-panel">
+                <div class="panel-header">
+                    You are ?
+                </div >
+                <div class="btn-container">
 
-                <button>Consumer</button>
-                <button>Producer/Supplier</button>
+                    <button id="consumer-btn">Consumer</button>
+                    <button id="supplier-btn">Producer/Supplier</button>
+                </div>
             </div>
+            
+            <div class="panel" id="consumer-panel">
+                <div class="panel-header">
+                   Sign Up 
+                </div >
+                <form action="#" method="get" autocomplete="off" novalidate>
+                    <div class="form-row">
+                        
+                        <div class="form-element">
+                            <label for="consumer-first-name">First Name *</label>
+                            <input id="consumer-first-name" type="text" supplierrst_name" required>
+                            <div></div>
+                        </div>
+                        <div class="form-element">
+                            <label for="consumer-last-name">Last Name *</label>
+                            <input id="consumer-last-name" type="text" name="last_name" required>
+                            <div></div>                            
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-element">
+                            
+                            <label for="consumer-email">Email *</label>
+                            <input id="consumer-email" type="email" title="Please enter a valid email" name="email" required>
+                            <div></div>
+                        </div>
+                        <div class="form-element">
+                            <label for="consumer-phone-number">Phone Number *</label>
+                            <input id="consumer-phone-number" type="tel" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Please enter a valid phone number" maxlength="10" required>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-element">
+                            <label for="consumer-password">Password *</label>
+                            <input id="consumer-password" type="password" title="Password should contain lls" name="password" required>
+                            <div></div>
+                        </div>
+                        <div class="form-element">
+                            <label for="consumer-password-confirm">Confirm Password *</label>
+                            <input id="consumer-password-confirm" type="password" name="password_confirm" required>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button type="button">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="panel" id="supplier-panel">
+                <div class="panel-header">
+                   Supplier Sign Up 
+                </div >
+                <form action="#" method="get" autocomplete="off" novalidate>
+                    <div class="form-row">
+                        
+                        <div class="form-element">
+                            <label for="supplier-first-name">First Name *</label>
+                            <input id="supplier-first-name" type="text" name="first_name" required>
+                            <div></div>
+                        </div>
+                        <div class="form-element">
+                            <label for="supplier-last-name">Last Name *</label>
+                            <input id="supplier-last-name" type="text" name="last_name" required>
+                            <div></div>                            
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-element">
+                            
+                            <label for="supplier-email">Email *</label>
+                            <input id="supplier-email" type="email" title="Please enter a valid email" name="email" required>
+                            <div></div>
+                        </div>
+                        <div class="form-element">
+                            <label for="supplier-phone-number">Phone Number *</label>
+                            <input id="supplier-phone-number" type="tel" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Please enter a valid phone number" maxlength="10" required>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-element">
+                            <label for="supplier-password">Password *</label>
+                            <input id="supplier-password" type="password" title="Password should contain lls" name="password" required>
+                            <div></div>
+                        </div>
+                        <div class="form-element">
+                            <label for="supplier-password-confirm">Confirm Password *</label>
+                            <input id="supplier-password-confirm" type="password" name="password_confirm" required>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button type="button">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

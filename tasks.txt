@@ -1,0 +1,72 @@
+Tasks:
+1. validating user input as sson as they type a "non-null" input and move away the focus
+    a. If inp curext, show tick validating
+    b. else show custom invalid input msg
+
+Paths to execute:
+    a. Buyilding different validation schemes for different input types
+    b. building a general scheme
+Of course option (b)
+
+Steps:
+1. No validate
+2. Check when:
+    i. focus entered
+    ii. non-null input is entered
+    iii. the focus is shifted
+3. Everytime the above happens console the new input
+4. Do validation:
+    4.a. check input type
+    4.b. find regEx corresponding to the input
+    4.c. call isInputValid(input, regEx)
+    4.d. returns an object{isValid:bool,text:string}
+    4.e. React to results:
+        i. obj.isValid === true: console(valid)
+        ii. obj.isValid === false: console(inValid)
+Goal: To give feedback based on the error committed by the user
+Done
+
+
+Next Goal: show the error messege on the screen
+Steps:
+1. Add a container for messege (div/span)
+2. Get the container through JS and fill it with content
+Done
+
+Next Goal: Add valid/invalid class to the input box based on the inputValidity
+Done
+
+Next Goal: Style the Input boxes as follows:
+    When focused:
+        add focused class
+    When focous gone:
+        Emptty?
+            Yes: Empty class
+            No: Filled class
+
+Goal: To prevent element from getting automatically focused when clicked
+Goal: prevent autofill formatting
+Goal: Prevent submission when all fields are not set properly
+Done
+Goal: Give visual feedback to user when they wanna submit the form, but havenn't filled all the boxes correctly:
+    Common: Show temporary prompt to user
+    let focusedInp = firstEmptyInp || firstInvalidInp
+    focusedInp.showRedBoxHighlight();
+    focusedInp.addFocus();
+Task: 
+    1. Style the input fields using css only
+        a. If potrait: Single column
+        b: landscape: 2 columns
+    2. Give tactile feedback when btn is clicked
+
+
+Goal:
+To create a JS library for generating and validating forms seamlessly
+
+Description:
+I would give simple instructions regarding the following:
+    a. Type of elements
+    b. Wrapping more than one elements with wrapper elements
+    c. Structuring the elements
+    d. Validating the form
+    
